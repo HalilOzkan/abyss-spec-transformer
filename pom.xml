@@ -4,16 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>9</version>
-        <relativePath/>
-    </parent>
+    <!--
+        <parent>
+            <groupId>org.sonatype.oss</groupId>
+            <artifactId>oss-parent</artifactId>
+            <version>9</version>
+            <relativePath/>
+        </parent>
+    -->
 
     <groupId>com.verapi.abyss</groupId>
     <artifactId>abyss-spec-transformer</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Abyss API Specification Transformer</name>
@@ -42,25 +44,23 @@
             <organization>Kodcu</organization>
             <organizationUrl>https://kodcu.com/</organizationUrl>
             <roles>
-                <role>Developer</role>
+                <role>Committer</role>
+            </roles>
+            <timezone>+3</timezone>
+        </developer>
+        <developer>
+            <name>Halil ÖZKAN</name>
+            <id>HalilOzkan</id>
+            <email>halil.ozkan@kutbar.com</email>
+            <url>https://github.com/HalilOzkan</url>
+            <organization>KutBar</organization>
+            <organizationUrl>https://kutbar.com</organizationUrl>
+            <roles>
+                <role>Maintainer</role>
             </roles>
             <timezone>+3</timezone>
         </developer>
     </developers>
-
-    <contributors>
-        <contributor>
-            <name>Halil ÖZKAN</name>
-            <email>halil.ozkan@verapi.com</email>
-            <url>https://github.com/HalilOzkan</url>
-            <organization>Verapi</organization>
-            <organizationUrl>https://verapi.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+3</timezone>
-        </contributor>
-    </contributors>
 
     <scm>
         <url>https://github.com/apiportal/abyss-spec-transformer</url>
@@ -89,33 +89,33 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.wsdl4j>1.6.3</version.wsdl4j>
-        <version.swagger-parser>2.0.11</version.swagger-parser>
-        <version.swagger-models>2.0.7</version.swagger-models>
-        <version.snakeYaml>1.24</version.snakeYaml>
-        <version.jackson-core>2.9.8</version.jackson-core>
-        <version.jackson-annotations>2.9.8</version.jackson-annotations>
-        <version.jackson-dataformat-yaml>2.9.8</version.jackson-dataformat-yaml>
-        <version.junit>4.12</version.junit>
-        <version.maven-project-info-reports-plugin>3.0.0</version.maven-project-info-reports-plugin>
-        <versions-maven-plugin>2.5</versions-maven-plugin>
-        <version.maven-site-plugin>3.7.1</version.maven-site-plugin>
-        <version.surefire-report.plugin>2.21.0</version.surefire-report.plugin>
-        <version.maven-release-plugin>2.5.3</version.maven-release-plugin>
-        <version.maven-enforcer-plugin>3.0.0-M2</version.maven-enforcer-plugin>
-        <version.maven-resources-plugin>3.1.0</version.maven-resources-plugin>
-        <version.maven-dependency-plugin>3.1.1</version.maven-dependency-plugin>
-        <version.maven-shade-plugin>3.2.1</version.maven-shade-plugin>
-        <version.maven-compiler-plugin>3.8.0</version.maven-compiler-plugin>
+        <version.swagger-parser>2.0.28</version.swagger-parser>
+        <version.swagger-models>2.1.11</version.swagger-models>
+        <version.snakeYaml>1.29</version.snakeYaml>
+        <version.jackson-core>2.13.0</version.jackson-core>
+        <version.jackson-annotations>2.13.0</version.jackson-annotations>
+        <version.jackson-dataformat-yaml>2.13.0</version.jackson-dataformat-yaml>
+        <version.junit>4.13.2</version.junit>
+        <version.maven-project-info-reports-plugin>3.1.2</version.maven-project-info-reports-plugin>
+        <versions-maven-plugin>2.8.1</versions-maven-plugin>
+        <version.maven-site-plugin>3.9.1</version.maven-site-plugin>
+        <version.surefire-report.plugin>3.0.0-M5</version.surefire-report.plugin>
+        <version.maven-release-plugin>3.0.0-M4</version.maven-release-plugin>
+        <version.maven-enforcer-plugin>3.0.0</version.maven-enforcer-plugin>
+        <version.maven-resources-plugin>3.2.0</version.maven-resources-plugin>
+        <version.maven-dependency-plugin>3.2.0</version.maven-dependency-plugin>
+        <version.maven-shade-plugin>3.2.4</version.maven-shade-plugin>
+        <version.maven-compiler-plugin>3.8.1</version.maven-compiler-plugin>
         <version.clean.plugin>3.1.0</version.clean.plugin>
-        <version.deploy.plugin>2.8.2</version.deploy.plugin>
-        <version.install.plugin>2.5.2</version.install.plugin>
-        <version.maven-jar-plugin>3.1.0</version.maven-jar-plugin>
-        <version.surefire.plugin>3.0.0-M3</version.surefire.plugin>
-        <version.assembly.plugin>3.1.1</version.assembly.plugin>
-        <version.maven-gpg-plugin.plugin>1.6</version.maven-gpg-plugin.plugin>
+        <version.deploy.plugin>3.0.0-M1</version.deploy.plugin>
+        <version.install.plugin>3.0.0-M1</version.install.plugin>
+        <version.maven-jar-plugin>3.2.0</version.maven-jar-plugin>
+        <version.surefire.plugin>3.0.0-M5</version.surefire.plugin>
+        <version.assembly.plugin>3.3.0</version.assembly.plugin>
+        <version.maven-gpg-plugin.plugin>3.0.1</version.maven-gpg-plugin.plugin>
         <version.maven-scm-publish-plugin>3.0.0</version.maven-scm-publish-plugin>
-        <version.maven-source-plugin>3.0.1</version.maven-source-plugin>
-        <version.maven-javadoc-plugin>3.1.0</version.maven-javadoc-plugin>
+        <version.maven-source-plugin>3.2.1</version.maven-source-plugin>
+        <version.maven-javadoc-plugin>3.3.1</version.maven-javadoc-plugin>
         <site.path>snapshot</site.path>
     </properties>
 
@@ -246,8 +246,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${version.maven-compiler-plugin}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -446,6 +446,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${version.surefire-report.plugin}</version>
                 <reportSets>
                     <reportSet>
                         <id>integration-tests</id>
