@@ -33,7 +33,7 @@ import com.ibm.wsdl.extensions.soap.SOAPOperationImpl;
 import com.ibm.wsdl.extensions.soap12.SOAP12AddressImpl;
 import com.ibm.wsdl.extensions.soap12.SOAP12OperationImpl;
 import com.ibm.wsdl.xml.WSDLReaderImpl;
-import com.sun.org.apache.xerces.internal.dom.DeferredTextImpl;
+import org.apache.xerces.dom.DeferredTextImpl;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.media.ComposedSchema;
 import io.swagger.v3.oas.models.media.Content;
@@ -112,7 +112,7 @@ public class OpenAPITransformer implements IAbyssTransformer {
      * @param path path url or directory
      * @return yaml file
      * @throws JsonProcessingException encountered problem while processing JSON content
-     * throws WSDLException            encountered problem while processing WSDL content
+     *                                 throws WSDLException            encountered problem while processing WSDL content
      * @see com.verapi.abyss.spec.transformer.IAbyssTransformer#transform(String)
      * <p>
      * Transforms the WSDL which given with the path param
@@ -126,7 +126,7 @@ public class OpenAPITransformer implements IAbyssTransformer {
 
     /**
      * @param documentBaseURI documentBaseURI URL of the definition of the WSDL it can be null or empty
-     * @param wsdl wsdl content of the WSDL
+     * @param wsdl            wsdl content of the WSDL
      * @return
      * @throws JsonProcessingException encountered problem while processing WSDL content
      * @throws WSDLException           encountered problem while processing WSDL content
@@ -142,19 +142,17 @@ public class OpenAPITransformer implements IAbyssTransformer {
     }
 
     /**
-     *
      * @param path path url or directory
      * @return definiton of the WSDL
      * @throws WSDLException encountered problem while processing WSDL content
      */
     protected Definition getDefinition(final String path) throws WSDLException {
-       return new WSDLReaderImpl().readWSDL(path);
+        return new WSDLReaderImpl().readWSDL(path);
     }
 
     /**
-     *
      * @param documentBaseURI documentBaseURI URL of the definition of the WSDL it can be null or empty
-     * @param wsdl wsdl content of the WSDL
+     * @param wsdl            wsdl content of the WSDL
      * @return definiton of the WSDL
      * @throws WSDLException encountered problem while processing WSDL content
      */
@@ -163,11 +161,10 @@ public class OpenAPITransformer implements IAbyssTransformer {
     }
 
     /**
-     *
      * @param definition definiton of the WSDL
      * @return openAPI
      */
-    protected OpenAPI getOpenAPI(final Definition definition){
+    protected OpenAPI getOpenAPI(final Definition definition) {
 
         final Map<String, Map<String, Object>> portBindingsMap = new HashMap<>();
         final OpenAPI openAPI = new OpenAPI();
